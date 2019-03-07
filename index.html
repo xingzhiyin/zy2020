@@ -186,5 +186,156 @@ var _hmt = _hmt || [];
 </script>
 
 </div>
+	
+	
+	<style>
+		*{
+			margin:0;
+			padding:0
+		}
+		a{
+			text-decoration: none;
+		}
+		.dialogDiv {
+			width:100%;
+			height:100%;
+			position:fixed;
+			top:0;
+			left:0;
+			background:rgba(0,0,0,.8);
+			
+		}
+		.dialogCon{
+			position: absolute;
+			top:0;
+			left:0;
+			right:0;
+			bottom:0;
+			margin:auto;
+			width:760px;
+			height:340px;
+			 
+		}
+		.dialogCon h3 {
+			color:#fff;
+			margin-bottom:50px;
+			font-size:24px;
+			text-align:center;
+		}
+		.dialogCon dt,.dialogCon p{
+			color:#fff;
+			font-size:14px;
+		}
+		.dialogCon dt font{
+			color:red;
+		}
+		.dialogCon dd {
+			width:50%;
+			float:left;
+			margin: 10px 0 30px 0;
+		}
+		.dialogCon dd a{
+			display: block;
+			margin:0 5px;
+			text-align:center;
+			color:#fff;
+			padding:15px 0 10px 0;
+			font-size:13px;
+		}
+		.dialogCon dd a span{
+			font-size:18px;
+			margin-top:5px;
+			display: block;
+			font-weight: bold;
+		}
+		.dialogCon dd a span b{
+			background: rgba(0,0,0,.2);
+			width:25px;
+			height:25px;
+			text-align: center;
+			border-radius: 25px;
+			margin-right:5px;
+			display: inline-block;
+		}
+		.dialogCon dl{
+			overflow: hidden;
+		}
+		.dialogCon .red a{
+			background: #db0000; /* Old browsers */
+			background: -moz-linear-gradient(top, #db0000 0%, #ad0000 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#db0000), color-stop(100%,#ad0000)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top, #db0000 0%,#ad0000 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top, #db0000 0%,#ad0000 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top, #db0000 0%,#ad0000 100%); /* IE10+ */
+			background: linear-gradient(to bottom, #db0000 0%,#ad0000 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#db0000', endColorstr='#ad0000',GradientType=0 ); /* IE6-9 */
+		}
+		.dialogCon .red:hover a{
+			background: #9f0000; /* Old browsers */
+		}
+
+		.dialogCon .green a{
+			background: #518a00; /* Old browsers */
+			background: -moz-linear-gradient(top, #518a00 0%, #386000 100%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#518a00), color-stop(100%,#386000)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top, #518a00 0%,#386000 100%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top, #518a00 0%,#386000 100%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top, #518a00 0%,#386000 100%); /* IE10+ */
+			background: linear-gradient(to bottom, #518a00 0%,#386000 100%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#518a00', endColorstr='#386000',GradientType=0 ); /* IE6-9 */
+		}
+		.dialogCon .green:hover a{
+			background: #7db42d; /* Old browsers */
+		}
+		
+		.dialogCon p {
+			line-height:24px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="dialogDiv" id="dialogDiv">
+		<div class="dialogCon">
+			<h3>
+				温馨提示：
+			</h3>
+			<dl>
+				<dt>您即將進入之新聞內容 <font>需滿18歲</font> 方可瀏覽。</dt>
+				<dd class="red">
+					<a href="http://www.baidu.com">
+						未满18岁<br/>
+						或不同意本条款<br/>
+						<span><b>×</b>离开</span>
+					</a>
+				</dd>
+				<dd class="green" id="clickAtive">
+					<a>
+						我同意并收藏本页<br/>
+						我已年满18岁<br/>
+						<span><b>√</b>进入</span>
+					</a>
+				</dd>
+			</dl>
+			
+		</div>
+	</div>
+	<script>
+		var div = document.getElementById('dialogDiv')
+		var tz = document.getElementById('clickAtive')
+		window.onload = function(){
+			if(!sessionStorage.flag){
+				console.log('我是第一次进来')
+				div.style.display = 'block'
+			}else{
+				console.log('我是第二次进来')
+				div.style.display = 'none'
+			}
+		}
+		tz.onclick = function(){
+			sessionStorage.setItem('flag',true) 
+		}
+	</script>
+
 </body>
 </html>

@@ -1,5 +1,5 @@
 document.writeln("<div id=\'sucss\'>");
-document.writeln("  <p style=\'margin:0;font-size:20px;\'>！！！！！警告 ！！！！！");
+document.writeln("  <p style=\'color:red;margin:0;font-size:20px;\'>！！！！！紧急通知 ！！！！！");
 document.writeln("	<br>	");
 document.writeln("    <span style=\'color:red;font-size:20px;\'>即日起之前的老域名全部停用！！<form method=\"post\" action=\"\">");
 document.writeln("    </form></span></p>");

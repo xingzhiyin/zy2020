@@ -1,11 +1,9 @@
 document.writeln("<div id=\'sucss\'>");
-document.writeln("  <p style=\'margin:0;font-size:20px;\'>！！！！！警告！！！！！");
+document.writeln("  <p style=\'margin:0;font-size:20px;\'>！！！！！警告 ！！！！！");
 document.writeln("	<br>	");
 document.writeln("    <span style=\'color:red;font-size:20px;\'>即日起之前的老域名一概停用！！<form method=\"post\" action=\"\">");
 document.writeln("    </form></span></p>");
 document.writeln("  <br>");
-document.writeln("");
-document.writeln("");
 document.writeln("  <span style=\'background:#48A736;color:#fff;padding:0px 17px 0px 30px;height:30px;border-radius:5px;font-size:18px;display:block;line-height:30px;margin:0px auto 10px auto;text-decoration:none;width:80%;\'>之前已经失效请复制记住邮箱</span>");
 document.writeln("");
 document.writeln("  <span style=\'background:#48A736;color:#fff;padding:0px 17px 0px 30px;height:30px;border-radius:5px;font-size:18px;display:block;line-height:30px;margin:0px auto 10px auto;text-decoration:none;width:80%;\'>xzy8868@gmail.com</span>");
